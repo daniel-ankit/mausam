@@ -1,0 +1,201 @@
+$blue: rgb(29, 161, 255);
+$grey: rgb(215, 215, 215);
+$white: rgba(255, 255, 255, 0.866);
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: $blue;
+    .container{
+        background-color: $white;  
+        border-radius: 10px;
+        width: 400px;
+        box-shadow: 2px 4px 8px rgba(88, 88, 88, 0.721);
+        header{
+            color: $blue;
+            font-size: 24px;
+            font-weight: 500;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.158);
+            padding: 16px 15px;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid $grey;
+            .logo{
+                cursor: pointer;
+                font-size: 30px;
+                margin-right: 8px;
+            }
+            i{
+                cursor: pointer;
+                font-size: 0px;
+                margin-right: 8px;
+            }
+        }
+        .input{ 
+            margin: 20px 25px 30px;
+            p{
+                display: none;
+                color: rgb(89, 89, 89);
+                font-size: 16px;  
+                margin-bottom: 15px;
+                text-align: center;
+                padding: 12px 10px;
+                border-radius: 9px;
+            }
+            .error
+            {
+                display: block;
+                color: #721c24;
+                background: #f8d7da;
+                border: 1px solid #f5c6cb;
+            }
+            .pending{
+                display: block;
+                color: #0c5460;
+                background: #c1ecf1;
+                border: 1px solid #bee5eb;
+            }
+            input, button{
+                width: 100%;
+                border: none;
+                outline: none;
+                height: 55px;
+                font-size: 18px;
+                padding-left: 5px;
+                text-align: center;
+                box-shadow: 1px 1px 3px rgba(158, 157, 157, 0.721);
+                border-radius: 9px;
+            }
+            input:is(:focus, :valid)
+            {
+                border: 1px solid $blue;
+            }
+            button{
+                box-shadow: 1px 1px 3px rgba(158, 157, 157, 0.721);
+                text-align: center;
+                background-color: $blue;
+                color: $white;
+                cursor: pointer;
+            }
+            .details{
+                height: 1px;
+                width: 100%;
+                margin: 20px 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .details::before{
+                content: "or";
+                color: rgb(89, 89, 89);
+                padding: 0 15px;
+                font-size: 16px;  
+            }
+
+        }
+    }
+    .weather-part{
+        margin: 30px 0 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        img{
+            max-width: 125px;
+        }
+        .temp{
+            display: flex;
+            font-size: 72px;
+            font-weight: 500;
+            .num{
+                font-weight: 600;
+            }
+            .deg{
+                font-size: 40px;
+                margin: 10px 5px 0 0;
+                display: block;
+            }
+        }
+        .weather{
+            font-size: 21px;
+            text-align: center;
+            margin: -5px 20px 15px;
+        }
+        .location{
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            font-size: 21px;
+            i{
+                font-size: 22px;
+                margin-right: 5px;
+            }
+        }
+        .bottom-details{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 2px solid $grey;
+            .column{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 15px 0;
+                i{
+                    color: $blue;
+                    font-size: 40px;
+                }
+                .details{
+                    .temp{
+                        font-size: 18px;
+                        font-weight: 500;
+                        margin-top: -3px;
+                        .deg{
+                            margin: 0;
+                            font-size: 17px;
+                            pad: 0 2px 0 1px;
+                        }
+                    }
+                    p{
+                        font-size: 14px;
+                        margin-top: -6px;
+                    }
+                }
+            }
+            .humidity{
+                border-left: 1px solid $grey;
+                span{
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin-top: -3px;
+                }
+            }
+        }
+    }
+    .container.active{
+        .input{
+            display: none;
+        }
+        .weather-part{
+            display: flex;
+        }
+        header i{
+            font-size: 30px;
+        }
+        header .logo{
+            font-size: 0px;
+        }
+    }
+}

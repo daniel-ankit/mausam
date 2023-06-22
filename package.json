@@ -1,0 +1,15 @@
+{
+  "name": "mausam",
+  "version": "1.0.0",
+  "description": "Dynamic weather app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ankit Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "boxicons": "^2.1.4",
+    "express": "^4.18.2"
+  }
+}

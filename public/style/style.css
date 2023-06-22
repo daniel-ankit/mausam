@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: rgb(29, 161, 255);
+}
+body .container {
+  background-color: rgba(255, 255, 255, 0.866);
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 2px 4px 8px rgba(88, 88, 88, 0.721);
+}
+body .container header {
+  color: rgb(29, 161, 255);
+  font-size: 24px;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.158);
+  padding: 16px 15px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid rgb(215, 215, 215);
+}
+body .container header .logo {
+  cursor: pointer;
+  font-size: 30px;
+  margin-right: 8px;
+}
+body .container header i {
+  cursor: pointer;
+  font-size: 0px;
+  margin-right: 8px;
+}
+body .container .input {
+  margin: 20px 25px 30px;
+}
+body .container .input p {
+  display: none;
+  color: rgb(89, 89, 89);
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-align: center;
+  padding: 12px 10px;
+  border-radius: 9px;
+}
+body .container .input .error {
+  display: block;
+  color: #721c24;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+body .container .input .pending {
+  display: block;
+  color: #0c5460;
+  background: #c1ecf1;
+  border: 1px solid #bee5eb;
+}
+body .container .input input, body .container .input button {
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 55px;
+  font-size: 18px;
+  padding-left: 5px;
+  text-align: center;
+  box-shadow: 1px 1px 3px rgba(158, 157, 157, 0.721);
+  border-radius: 9px;
+}
+body .container .input input:is(:focus, :valid) {
+  border: 1px solid rgb(29, 161, 255);
+}
+body .container .input button {
+  box-shadow: 1px 1px 3px rgba(158, 157, 157, 0.721);
+  text-align: center;
+  background-color: rgb(29, 161, 255);
+  color: rgba(255, 255, 255, 0.866);
+  cursor: pointer;
+}
+body .container .input .details {
+  height: 1px;
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .container .input .details::before {
+  content: "or";
+  color: rgb(89, 89, 89);
+  padding: 0 15px;
+  font-size: 16px;
+}
+body .weather-part {
+  margin: 30px 0 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body .weather-part img {
+  max-width: 125px;
+}
+body .weather-part .temp {
+  display: flex;
+  font-size: 72px;
+  font-weight: 500;
+}
+body .weather-part .temp .num {
+  font-weight: 600;
+}
+body .weather-part .temp .deg {
+  font-size: 40px;
+  margin: 10px 5px 0 0;
+  display: block;
+}
+body .weather-part .weather {
+  font-size: 21px;
+  text-align: center;
+  margin: -5px 20px 15px;
+}
+body .weather-part .location {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 21px;
+}
+body .weather-part .location i {
+  font-size: 22px;
+  margin-right: 5px;
+}
+body .weather-part .bottom-details {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid rgb(215, 215, 215);
+}
+body .weather-part .bottom-details .column {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0;
+}
+body .weather-part .bottom-details .column i {
+  color: rgb(29, 161, 255);
+  font-size: 40px;
+}
+body .weather-part .bottom-details .column .details .temp {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: -3px;
+}
+body .weather-part .bottom-details .column .details .temp .deg {
+  margin: 0;
+  font-size: 17px;
+  pad: 0 2px 0 1px;
+}
+body .weather-part .bottom-details .column .details p {
+  font-size: 14px;
+  margin-top: -6px;
+}
+body .weather-part .bottom-details .humidity {
+  border-left: 1px solid rgb(215, 215, 215);
+}
+body .weather-part .bottom-details .humidity span {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: -3px;
+}
+body .container.active .input {
+  display: none;
+}
+body .container.active .weather-part {
+  display: flex;
+}
+body .container.active header i {
+  font-size: 30px;
+}
+body .container.active header .logo {
+  font-size: 0px;
+}/*# sourceMappingURL=style.css.map */
