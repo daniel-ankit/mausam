@@ -13,7 +13,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: rgb(29, 161, 255);
+  background: rgb(27, 143, 226);
 }
 body .container {
   background-color: rgba(255, 255, 255, 0.866);
@@ -22,7 +22,7 @@ body .container {
   box-shadow: 2px 4px 8px rgba(88, 88, 88, 0.721);
 }
 body .container header {
-  color: rgb(29, 161, 255);
+  color: rgb(27, 143, 226);
   font-size: 24px;
   font-weight: 500;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.158);
@@ -77,12 +77,12 @@ body .container .input input, body .container .input button {
   border-radius: 9px;
 }
 body .container .input input:is(:focus, :valid) {
-  border: 1px solid rgb(29, 161, 255);
+  border: 1px solid rgb(27, 143, 226);
 }
 body .container .input button {
   box-shadow: 1px 1px 3px rgba(158, 157, 157, 0.721);
   text-align: center;
-  background-color: rgb(29, 161, 255);
+  background-color: rgb(27, 143, 226);
   color: rgba(255, 255, 255, 0.866);
   cursor: pointer;
 }
@@ -153,7 +153,7 @@ body .weather-part .bottom-details .column {
   padding: 15px 0;
 }
 body .weather-part .bottom-details .column i {
-  color: rgb(29, 161, 255);
+  color: rgb(27, 143, 226);
   font-size: 40px;
 }
 body .weather-part .bottom-details .column .details .temp {
